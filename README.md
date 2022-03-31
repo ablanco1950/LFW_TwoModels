@@ -31,7 +31,7 @@ Both files should be downloaded to the C: drive, otherwise you have to change th
 
 Note that both files contain images from the lfw2 image database, referenced above, but removing interfering images.
 
-Los programas a ejecutar son:
+The programs to run are:
 
 GuessImagesLFW_MinDist.py which performs the test according to the minimum distance model.
 GuessImagesLFW_CnnKeras.py which performs the test according to the cnn keras model.
@@ -60,13 +60,23 @@ The program GuessImagesLFW_MinDist.py allows to detect the image that has been p
 References:
 
 https://keras.io/examples/vision/mnist_convnet/.
+
 http://vis-www.cs.umass.edu/lfw/#download
+
 https://stackoverflow.com/questions/1871536/minimum-euclidean-distance-between-points-in-two-different-numpy-arrays-not-wit
+
 https://github.com/ablanco1950/MNIST_WITHOUT_SKLEARN
- https://www.aprendemachinelearning.com/clasificacion-de-imagenes-en-python/
+
+https://www.aprendemachinelearning.com/clasificacion-de-imagenes-en-python/
+
 https://victorzhou.com/blog/intro-to-cnns-part-1/
+
 https://victorzhou.com/blog/intro-to-cnns-part-2/
+
 https://victorzhou.com/blog/keras-cnn-tutorial/
+
 https://realpython.com/face-recognition-with-python/
+
 https://realpython.com/face-detection-in-python-using-a-webcam/
+
 
