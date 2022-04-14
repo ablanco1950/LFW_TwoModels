@@ -5,12 +5,19 @@ Requirements:
 
 Have python installed (not necessarily the latest version, although it is the one with which the tests have been carried out) and the packages corresponding to:
 import os
+
 import re
+
 import cv2
+
 import numpy as np
+
 from tensorflow import keras
+
 from tensorflow.keras import layers
+
 from scipy.spatial.distance import cdist
+
 import time
 
 It is recommended to have Anconda installed and to work with Spyder from Anaconda, which guarantees an integrated and friendly environment, installing any missing package from the Anaconda cmd.exe prompt option with commands such as:
@@ -25,7 +32,7 @@ Se acompañan los ficheros de prueba:
 
 lfw3.zip containing training images downloaded from http://vis-www.cs.umass.edu/lfw/#download  and specifically from the option All images aligned with commercial face alignment software (LFW-a - Taigman, Wolf, Hassner) 
 
-lfw3_test.zip containing the test images used.
+lfw3_test.zip containing the test images used.No image of the test is found in the training, this is important because the model based on CNN gives extremely good results when the image to be tested is in the training and it drops a lot using images in the test that are not in the training. In the model based on minimum distance, it is avoided by means of an instruction that does not consider the images whose minimum distance is zero.
 
 Both files should be downloaded to the C: drive, otherwise you have to change the dirname and dirname_test parameters at the beginning of the two attached programs.
 
