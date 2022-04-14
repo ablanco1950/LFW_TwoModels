@@ -12,8 +12,10 @@ by Alfonso Blanco García , March 2022
 ######################################################################
 dirname = "C:\\lfw3"
 dirname_test = "C:\\lfw3_test"
+#dirname = "C:\\lfw2"
+#dirname_test=dirname
 batch_size = 128
-epochs = 15
+epochs = 30
 ######################################################################
 
 import os
@@ -152,12 +154,18 @@ model = keras.Sequential(
     [
         keras.Input(shape=input_shape),
         layers.Conv2D(32, kernel_size=(3, 3), activation="relu"),
-        layers.MaxPooling2D(pool_size=(2, 2)),
-        layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
-        layers.MaxPooling2D(pool_size=(2, 2)),
-       
-        #layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
         #layers.MaxPooling2D(pool_size=(2, 2)),
+        #https://medium.com/imagescv/all-about-pooling-layers-for-convolutional-neural-networks-cnn-c4bca1c35e31
+        layers.AveragePooling2D(pool_size=(2, 2)),
+        layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
+        #layers.MaxPooling2D(pool_size=(2, 2)),
+        #https://medium.com/imagescv/all-about-pooling-layers-for-convolutional-neural-networks-cnn-c4bca1c35e31
+        layers.AveragePooling2D(pool_size=(2, 2)),
+        #layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
+        
+        #layers.MaxPooling2D(pool_size=(2, 2)),
+        #https://medium.com/imagescv/all-about-pooling-layers-for-convolutional-neural-networks-cnn-c4bca1c35e31
+        #layers.AveragePooling2D(pool_size=(2, 2)),
         layers.Flatten(),
         layers.Dropout(0.5),
         layers.Dense(num_classes, activation="softmax"),
@@ -200,7 +208,7 @@ for i in range(len(x_test)):
               + " " + TabDenoClass[(predictions[i])] )
               
     else:
-        print(TabNumImage_test[i]+ " Se le asigna la clase " + str(predictions[i])
+        print(TabNumImage_test[i]+ " is assigned class " + str(predictions[i])
               + " " + TabDenoClass[(predictions[i])])
         TotalHits=TotalHits+1
            
