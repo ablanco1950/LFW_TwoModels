@@ -23,12 +23,15 @@ import time
 It is recommended to have Anconda installed and to work with Spyder from Anaconda, which guarantees an integrated and friendly environment, installing any missing package from the Anaconda cmd.exe prompt option with commands such as:
 
 python -m pip install keras (case of  keras)
+
 python -m pip install opencv-python (case of  cv2)
+
 python -m pip install tensorflow (case of  tensorflow)
 
-Funcionamiento:
 
-Se acompañan los ficheros de prueba:
+Functioning:
+
+are accompanied the test and training datasets
 
 lfw3.zip containing training images downloaded from http://vis-www.cs.umass.edu/lfw/#download  and specifically from the option All images aligned with commercial face alignment software (LFW-a - Taigman, Wolf, Hassner) 
 
