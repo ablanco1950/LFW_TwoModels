@@ -39,7 +39,7 @@ lfw3_test.zip containing the test images used.No image of the test is found in t
 
 Both files should be downloaded to the C: drive, otherwise you have to change the dirname and dirname_test parameters at the beginning of the two attached programs.
 
-Note that both files contain images from the lfw2 image database, referenced above, but removing interfering images.
+Note that both files contain images from the lfw2 image database, referenced above, but removing interfering images.That is, a necessary debugging of images has been carried out.
 
 The programs to run are:
 
