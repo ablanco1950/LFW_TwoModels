@@ -106,28 +106,30 @@ def loadimages (dirname ):
 
 X_train, Y_train, TabNumImage, TabDenoClass = loadimages (dirname )
 
-num_classes=len(TabDenoClass)
-print("Number of classes = " + str(num_classes))
+
+
+X_test, Y_test, TabNumImage_test, TabDenoClass_test = loadimages(dirname_test)
+
+
 print( "")
 for i in range(len(Y_train)):
     print(TabNumImage[i]+ " is class " + str(Y_train[i]))
 print("")
 
-X_test, Y_test, TabNumImage_test, TabDenoClass_test = loadimages(dirname_test)
-
+num_classes=len(TabDenoClass)
+print("Number of classes = " + str(num_classes))
 x_train=np.array(X_train)
 
 y_train=np.array(Y_train)
 
 x_test=np.array(X_test)
 y_test=np.array(Y_test)
-pp_test=y_test
 
 from sklearn.svm import SVC
 import pickle #to save the model
 
 from sklearn.multiclass import OneVsRestClassifier
-print(x_train.shape)
+
 
 #https://scikit-learn.org/stable/modules/generated/sklearn.multiclass.OneVsRestClassifier.html
 model = OneVsRestClassifier(SVC(kernel='linear', probability=True, verbose=True, max_iter=1000)) #Creates model instance here
